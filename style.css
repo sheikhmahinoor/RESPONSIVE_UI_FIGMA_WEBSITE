@@ -1,0 +1,733 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, black, rgb(51, 50, 50));
+  cursor: pointer;
+}
+nav {
+  color: white;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  padding: 0 2.1vh;
+  color: white;
+}
+nav ul li a:hover {
+  color: gray;
+  transition: 0.7s;
+}
+nav ul li a.active {
+  color: white;
+}
+.active {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ri-circle-fill {
+  font-size: 6px;
+}
+#checkbtn {
+  font-size: 4vw;
+  display: none;
+}
+#check {
+  display: none;
+}
+#check:checked ~ ul {
+  left: 0;
+}
+@media (max-width: 895px) {
+  #checkbtn {
+    display: block;
+  }
+  nav ul {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    transition: 0.5s;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    display: block;
+    line-height: 80px;
+    margin: 20px;
+    font-size: 3vw;
+  }
+  nav ul li a {
+    color: black;
+  }
+  .active {
+    color: black;
+  }
+  nav ul li a.active {
+    color: black;
+  }
+}
+.div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.div button {
+  padding: 7px 20px;
+  border-radius: 30px;
+  border: none;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  position: relative;
+  top: 7rem;
+  margin-top: 5rem;
+}
+.ri-arrow-right-down-line {
+  font-size: 20vw;
+}
+.container h1 {
+  font-size: 18vw;
+  text-align: center;
+}
+.arrow h3 {
+  font-size: 2vw;
+  margin-top: 7rem;
+}
+@media (max-width: 1440px) {
+  .container h1 {
+    margin-top: 2rem;
+  }
+  .section .manage img {
+    width: 30rem;
+  }
+  .class{
+    margin-top: 7rem;
+  }
+  .class img{
+    width: 8rem;
+  }
+  .family .gallery img{
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (max-width:2560px) {
+  .gallary .one{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .container h1 {
+    margin-top: 4rem;
+  }
+  .arrow h3 {
+    margin-top: 5rem;
+  }
+  .section .manage img {
+    width: 28rem;
+  }
+  .family .gallery img{
+    width: 7rem;
+    height: 7rem;
+  }
+  /* .gol img{
+    width: 20rem;
+  }
+  .col .inp input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 50px;
+  }
+  .inp .main input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 18rem;
+  }
+  .inp button img{
+    width: 1.5rem;
+  } */
+  .gallery{
+    display: flex;
+    justify-content: space-between;
+    gap: 58px;
+  }
+  .family .gallery img{
+    width: 15rem;
+    height: 15rem;
+  }
+  .circle{
+    flex-direction: column;
+  }
+}
+@media (max-width: 942px) {
+  .section {
+    padding: 0 40px;
+  }
+  .emmet{
+    padding: 0 50px;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .container h1 {
+    margin-top: 5rem;
+  }
+  .arrow h3 {
+    margin-top: 4rem;
+  }
+  .section {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .emmet {
+    flex-direction: column-reverse;
+    margin-top: 10rem;
+  }
+  .manage {
+    margin-top: 2rem;
+  }
+  .manage img {
+    object-fit: contain;
+    width: 28rem;
+    height: 28rem;
+  }
+  .emmet .em .ee {
+    object-fit: contain;
+    width: 28rem;
+    height: 28rem;
+    margin-top: 2rem;
+  }
+  .be h1 {
+    font-size: 4vw;
+  }
+  .be h1 sup {
+    font-size: 3vw;
+  }
+  .be p {
+    font-size: 3vw;
+  }
+  .met h1 {
+    font-size: 4vw;
+  }
+  .met h1 sup {
+    font-size: 3vw;
+  }
+  .met p {
+    font-size: 3vw;
+  }
+  .inputs{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input{
+    padding: 2px 0;
+  }
+  .moon p{
+    font-size: 10px;
+  }
+  .find p{
+    font-size: 10px;
+  }
+  .footerone{
+    text-align: center;
+    flex-direction: column;
+  }
+  .find button img{
+    width: 1.5rem;
+  }
+  .footerone img{
+    width: 5rem;
+  }
+  .footerone p{
+    font-size: 12px;
+  }
+  .short{
+    flex-wrap: wrap;
+    gap: 0px;
+    padding: 0 50px;
+    text-align: center;
+  }
+  .footer p{
+    font-size: 12px;
+  }
+  .short p{
+    font-size: 12px;
+  }
+  .last p{
+    font-size: 13px;
+  }
+  .col p{
+    font-size: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .container h1 {
+    margin-top: 6rem;
+  }
+  .arrow h3 {
+    margin-top: 2rem;
+  }
+  nav .logo img {
+    width: 6rem;
+  }
+  .div button {
+    padding: 3px 10px;
+  }
+  .div img {
+    width: 2rem;
+  }
+  .section {
+    text-align: center;
+  }
+  .emmet {
+    text-align: center;
+  }
+  .bit {
+    display: flex;
+    justify-content: center;
+  }
+  .bit button {
+    padding: 0;
+  }
+  .bit button img {
+    width: 2rem;
+  }
+  .dot {
+    width: 3rem;
+  }
+  .emmet {
+    margin-top: 3rem;
+  }
+  .class img{
+    width: 4rem;
+  }
+  .location{
+    flex-direction: column;
+  }
+  .find{
+    padding: 20px 0;
+  }
+  .gallary img{
+    flex-direction: column;
+  }
+    .gol img{
+    width: 20rem;
+  }
+  .col .inp input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 50px;
+  }
+  .inp .main input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 18rem;
+  }
+  .inp button img{
+    width: 1.5rem;
+  }
+  .in{
+    flex-direction: column;
+  }
+  .put{
+    flex-direction: column;
+  }
+  .inp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .inp .main input{
+    padding-right: 10rem;
+  }
+  .circle{
+    text-align: center;
+  }
+  .circle p{
+    font-size: 10px;
+  }
+  .last p{
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .container h1 {
+    margin-top: 6rem;
+  }
+  .arrow h3 {
+    margin-top: 2rem;
+  }
+  .ri-arrow-right-down-line {
+    font-size: 26vw;
+  }
+  .dot {
+    width: 2rem;
+  }
+  .class{
+    flex-direction: column;
+  }
+  .inputs{
+    flex-direction: column;
+  }
+}
+@media (max-width: 320px) {
+  .div img {
+    width: 1.5rem;
+  }
+  .div {
+    gap: 20px;
+  }
+  .manage img {
+    object-fit: contain;
+    width: 28rem;
+    height: 25rem;
+  }
+  .dot {
+    width: 1.5rem;
+  }
+  .em .ee {
+    object-fit: contain;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media (max-width: 594px) {
+  .container h1 {
+    margin-top: 7rem;
+  }
+  .arrow h3 {
+    margin-top: 1.5rem;
+  }
+  .gol img{
+    width: 15rem;
+  }
+  .inp .main input{
+    padding-right: 8rem;
+  }
+}
+@media (max-width: 1205px) {
+  .container h1 {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 738px) {
+  .container h1 {
+    margin-top: 5.5rem;
+  }
+}
+@media (max-width: 518px) {
+  .container h1 {
+    margin-top: 6.5rem;
+  }
+}
+@media (max-width: 1120px) {
+  .arrow h3 {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 663px) {
+  .arrow h3 {
+    margin-top: 3.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .arrow h3 {
+    margin-top: 2rem;
+  }
+}
+.bullets {
+  display: flex;
+  justify-content: center;
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 75vh;
+}
+.bit button {
+  padding: 0px 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  margin: 10px 0;
+}
+.bit button img {
+  position: relative;
+  left: 0.6rem;
+  width: 1.5rem;
+}
+.be p {
+  margin: 10px 0;
+  color: rgb(90, 89, 89);
+}
+.be h1 {
+  margin: 10px 0;
+}
+.be h1 sup {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.emmet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 73vh;
+}
+.met p {
+  margin: 10px 0;
+  color: rgb(90, 89, 89);
+}
+.met h1 {
+  margin: 10px 0;
+}
+.met h1 sup {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  padding: 5rem 0;
+  background-color: black;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.class img{
+  width: 7rem;
+}
+.element{
+  width: 100%;
+}
+.element h1{
+  font-size: 8vw;
+  text-align: center;
+}
+.element img{
+  width: 100%;
+}
+.moon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.inputs{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+input{
+  background: transparent;
+  border: 1px solid white;
+  padding: 5px 7px;
+  border-radius: 30px;
+}
+.moon button img{
+  width: 1.6rem;
+}
+.moon h2{
+  font-size: 3.5vw;
+  margin: 5px 0;
+}
+.moon p{
+  color: rgb(140, 138, 138);
+  margin: 5px 0;
+}
+.moon button{
+  margin: 10px 0;
+}
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+}
+.location .img{
+  width: 50%;
+}
+.find h1{
+  font-size: 3vw;
+}
+.find{
+  padding-right: 10px;
+  text-align: center;
+  width: 50%;
+}
+.find .bit{
+  display: flex;
+  justify-content: center;
+}
+.find .bit button img{
+  width: 1rem;
+  padding: 0;
+  font-size: 10px;
+}
+.find p{
+  color: rgb(152, 149, 149);
+}
+.family{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+.part{
+  text-align: center;
+  padding-bottom: 60px;
+}
+.part h1{
+  font-size: 3.5vw;
+}
+.part p{
+  color: gray;
+}
+.gallery{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.family .gallery img{
+  width: 20rem;
+  height: 20rem;
+}
+.circle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin-top: 70px;
+}
+.circle h1{
+  font-size: 3.5vw
+}
+.circle p{
+  color: gray;
+  line-height: 30px;
+  padding: 5px 25px
+}
+.in{
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+}
+.put{
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+}
+.inp input{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 100px;
+  border: 1px solid gray;
+}
+.main input{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 24.6rem;
+  margin: 20px;
+}
+.inp button{
+  margin-left: 20px;
+  /* padding: 10px 30px; */
+  gap: 30px;
+}
+.inp button img{
+  width: 3rem;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  padding: 50px 0;
+}
+.footerone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.short{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.short h2{
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.footer p{
+  color: rgb(187, 184, 184);
+  padding: 10px 0;
+}
+.last{
+  margin: 25px;
+}
+@media (max-width:13220px) {
+  .gol img{
+    width: 20rem;
+  }
+  .col input{
+    padding: 7px;
+  }
+  .inp .main input{
+    padding-right: 12rem;
+  } 
+  .inp button img{
+    width: 1.5rem;
+  }
+  .footerone p{
+    flex-wrap: wrap;
+  }
+}
